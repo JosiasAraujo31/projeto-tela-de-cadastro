@@ -1,0 +1,135 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg: #fff;
+  --border-color: #ccc;
+  --button-bg: #28a745;
+  --button-text: #fff;
+  --link-color: #007bff;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #eee;
+  --card-bg: #2c2c2c;
+  --border-color: #444;
+  --button-bg: #0d6efd;
+  --button-text: #fff;
+  --link-color: #66b2ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+}
+
+form {
+  background-color: var(--card-bg);
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cliente-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  margin: 15px auto;
+  max-width: 600px;
+  border-left: 4px solid var(--button-bg);
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.theme-toggle {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 200px;
+  padding: 10px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  form, .cliente-card {
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  input, button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .theme-toggle {
+    font-size: 14px;
+  }
+
+  .cliente-card {
+    font-size: 14px;
+  }
+}
